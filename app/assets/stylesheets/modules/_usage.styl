@@ -16,29 +16,32 @@
       border-bottom 2px solid #e0e0e0
 
   .stats-grid
-    display grid
-    grid-template-columns repeat(3, 1fr)
+    display flex
+    flex-wrap wrap
+    justify-content center
     gap 15px
     margin 20px 0
     max-width 800px
 
   .stats-card
+    flex 0 0 calc(33.333% - 10px)
     text-align center
-    padding 15px
+    padding 24px
     margin 0
+    border-radius 6px
     
     h3
       font-size 1.8em
-      font-weight 700
+      font-weight 500
       color #2c5aa0
       margin 0 0 8px 0
       
     p
-      color #666
+      color #888
       font-size 0.85em
       margin 0
       text-transform uppercase
-      letter-spacing 0.5px
+      letter-spacing 1px
 
   .section-header
     margin-bottom 20px
@@ -139,10 +142,10 @@
 
   @media (max-width: 768px)
     .stats-grid
-      grid-template-columns repeat(2, 1fr)
       gap 12px
       
     .stats-card
+      flex 0 0 calc(50% - 6px)
       padding 12px
       
       h3
@@ -152,10 +155,8 @@
       columns 1
 
   @media (max-width: 480px)
-    .stats-grid
-      grid-template-columns 1fr
-      
     .stats-card
+      flex 0 0 100%
       padding 12px
       
       h3
